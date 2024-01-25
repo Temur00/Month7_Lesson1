@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-const Teachers = () => {
+const Teachers = ({ user }) => {
   if (!user) {
     return <Navigate to="/login" replace />;
   }
