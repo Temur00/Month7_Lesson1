@@ -1,0 +1,14 @@
+.header {
+  background: blue;
+  nav {
+    // display: flex;
+    .links {
+      padding-left: 200px;
+      display: flex;
+      gap: 16px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

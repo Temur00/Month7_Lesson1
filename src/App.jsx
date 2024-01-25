@@ -6,9 +6,10 @@ import Students from "./pages/Students";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/login/Login";
+import Home from "./pages/Home";
 
 import Header from "./components/Header";
-import Sidebar from "./pages/Sidebar";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -16,12 +17,12 @@ const App = () => {
   return (
     <div className="d-flex">
       <Router>
-        {/* <Sidebar /> */}
+        {user ? <Sidebar user={user} /> : null}{" "}
         <div>
           {user ? <Header user={user} /> : null}
 
           <Routes>
-            <Route path="/" element={<Sidebar user={user} />} />
+            <Route path="/" element={<Home user={user} />} />
 
             <Route path="/teachers" element={<Teachers user={user} />} />
             <Route path="/students" element={<Students user={user} />} />
