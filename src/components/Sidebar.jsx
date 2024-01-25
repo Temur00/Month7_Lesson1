@@ -1,16 +1,11 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-const Products = ({ user }) => {
+const Sidebar = ({ user }) => {
   if (!user) {
     return <Navigate to="/login" replace />;
   }
-
-  return (
-    <div>
-      <h1>Products</h1>
-    </div>
-  );
+  return <div>Sidebar</div>;
 };
 
-export default Products;
+export default Sidebar;
